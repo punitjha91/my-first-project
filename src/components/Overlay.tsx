@@ -2,9 +2,7 @@
 
 import { useScroll, useTransform, motion } from "framer-motion";
 
-export default function Overlay() {
-  const { scrollYProgress } = useScroll();
-
+export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
   // Opacity transforms
   const opacity1 = useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]);
   const opacity2 = useTransform(scrollYProgress, [0.2, 0.3, 0.4, 0.5], [0, 1, 1, 0]);
@@ -16,7 +14,7 @@ export default function Overlay() {
   const y3 = useTransform(scrollYProgress, [0.5, 0.8], [50, -50]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-10 flex flex-col justify-center text-white mix-blend-difference">
+    <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-center text-white mix-blend-difference">
         {/* Section 1 */}
         <motion.div 
             style={{ opacity: opacity1, y: y1 }}
