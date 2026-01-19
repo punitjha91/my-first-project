@@ -63,17 +63,23 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-[#121212] relative z-10" id="testimonials">
-       <div className="container mx-auto px-6 mb-16 text-center">
+    <section className="relative z-20 bg-[#0a0a0a] py-32 overflow-hidden" id="testimonials">
+      {/* Background Ambience - Different position for variety */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+         <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
+         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
+      </div>
+
+       <div className="container mx-auto px-6 mb-16 text-center relative z-10">
             <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-bold text-white mb-4"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
             >
-                Kind Words
+                Kind <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">Words</span>
             </motion.h2>
-            <p className="text-gray-400 max-w-xl mx-auto mb-8">
+            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
                 Feedback from clients and collaborators I've had the pleasure of working with.
             </p>
             

@@ -41,10 +41,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-24 px-4 md:px-12 bg-[#0a0a0a] overflow-hidden" id="contact">
+    <section className="relative z-20 bg-[#0a0a0a] py-32 px-4 md:px-12 overflow-hidden" id="contact">
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[100px]" />
       </div>
 
@@ -57,7 +57,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">
               Let's work <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-500">
                 together.

@@ -31,13 +31,19 @@ const ARTICLES = [
 
 export default function Blog() {
   return (
-    <section className="py-32 bg-[#121212] relative z-10" id="blog">
-      <div className="container mx-auto px-6">
+    <section className="relative z-20 bg-[#0a0a0a] py-32 px-4 md:px-12 overflow-hidden" id="blog">
+       {/* Background Ambience */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-20%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-white mb-16 text-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-5xl md:text-7xl font-bold text-white mb-16 text-center tracking-tight"
         >
           Insights
         </motion.h2>

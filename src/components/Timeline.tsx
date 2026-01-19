@@ -38,19 +38,25 @@ export default function Timeline() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="py-32 bg-[#121212] text-white relative overflow-hidden" id="journey">
-      <div className="container mx-auto px-6 relative z-10">
+    <section className="relative z-20 bg-[#0a0a0a] min-h-screen py-32 px-4 md:px-12 overflow-hidden" id="journey">
+       {/* Background Ambience */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-20%] right-[20%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
-           transition={{ duration: 0.8 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
            className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            My Journey
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+             My <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">Journey</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             From writing my first "Hello World" to building complex applications. 
             Here is a glimpse into my professional evolution.
           </p>
@@ -67,10 +73,6 @@ export default function Timeline() {
           </div>
         </div>
       </div>
-      
-       {/* Background Elements */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 right-10 w-64 h-64 bg-purple-600/10 rounded-full blur-[100px]" />
     </section>
   );
 }
