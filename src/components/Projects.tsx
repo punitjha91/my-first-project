@@ -12,13 +12,16 @@ const projects = [
     description: "Scalable hotel management system with 5+ Node.js services.",
     longDescription: "A comprehensive Microservices-based Hotel Management System designed to streamline reservations, billing, and housekeeping. Built with a focus on scalability and service isolation.",
     techStack: ["Node.js", "Docker", "Kubernetes", "Redis", "RabbitMQ", "Next.js"],
-    repo: "https://github.com/fawaz-v/elite-hotel-backend",
+    repo: "https://github.com/fawazv/Elite-hotel",
     demo: "#",
     color: "from-blue-600/20 to-cyan-500/20",
     hoverColor: "group-hover:from-blue-600/40 group-hover:to-cyan-500/40",
     span: "md:col-span-2 md:row-span-2",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4" // Abstract Tech Network
+    // Abstract Network/Server for Grid - High Quality Tech Abstract
+    mediaUrl: "https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4",
+    // Code/Structure Demo for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" 
   },
   {
     id: "nxtcart",
@@ -27,13 +30,16 @@ const projects = [
     description: "Modern shopping platform with automated workflows.",
     longDescription: "A modern e-commerce application featuring secure authentication, payment processing with Stripe/PayPal, and a robust admin dashboard for product management.",
     techStack: ["Next.js", "TypeScript", "Stripe", "MongoDB", "Shadcn UI"],
-    repo: "https://github.com/fawaz-v/nxtcart",
+    repo: "https://github.com/fawazv/nxt-cart",
     demo: "#",
     color: "from-purple-600/20 to-pink-500/20",
     hoverColor: "group-hover:from-purple-600/40 group-hover:to-pink-500/40",
     span: "md:col-span-1 md:row-span-2",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2020/05/25/40149-423985179_large.mp4" // Shopping/Future Retail abstract
+    // Future/Retail Abstract for Grid - Shopping/Ecommerce Concept
+    mediaUrl: "https://www.pexels.com/download/video/2257012-uhd_2560_1440_30fps.mp4",
+    // Shopping/Cart Interaction for Modal 
+    demoVideoUrl: "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" 
   },
   {
     id: "dropbox-clone",
@@ -42,13 +48,16 @@ const projects = [
     description: "Secure file storage with drag-and-drop & metadata.",
     longDescription: "A functional clone of Dropbox allowing users to upload, organize, and manage files in the cloud. Features real-time updates and secure authentication.",
     techStack: ["React", "Firebase", "Tailwind CSS"],
-    repo: "https://github.com/fawaz-v/dropbox-clone",
+    repo: "https://github.com/fawazv/dropbox-clone",
     demo: "#",
     color: "from-orange-500/20 to-red-500/20",
     hoverColor: "group-hover:from-orange-500/40 group-hover:to-red-500/40",
     span: "md:col-span-1 md:row-span-1",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2023/10/12/184734-873923034_large.mp4" // Cloud/Data abstract
+    // Cloud/Data Abstract for Grid - Cloud/Sky/Tech
+    mediaUrl: "https://www.pexels.com/download/video/19963500-uhd_2560_1440_30fps.mp4",
+    // File/Folder Management for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/3252455/3252455-uhd_2560_1440_25fps.mp4"
   },
   {
     id: "blog-microservices",
@@ -57,13 +66,16 @@ const projects = [
     description: "Event-driven architecture with RabbitMQ.",
     longDescription: "Built User, Post, and Comment services with API Gateway and RabbitMQ communication. Containerized with Docker Compose and automated pipeline via GitHub Actions.",
     techStack: ["Node.js", "RabbitMQ", "Docker"],
-    repo: "https://github.com/fawaz-v/blog-microservices",
+    repo: "https://github.com/fawazv/blog-microservice",
     demo: "#",
     color: "from-green-600/20 to-teal-500/20",
     hoverColor: "group-hover:from-green-600/40 group-hover:to-teal-500/40",
     span: "md:col-span-1 md:row-span-1",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2020/05/11/38466-419793732_large.mp4" // Code/Typing abstract
+    // Typing/Code Abstract for Grid - Matrix/Data Flow
+    mediaUrl: "https://www.pexels.com/download/video/35088034-uhd_2560_1440_25fps.mp4",
+    // Server/Terminal for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/5309324/5309324-uhd_2560_1440_30fps.mp4"
   },
   {
     id: "bookstore-app",
@@ -72,13 +84,16 @@ const projects = [
     description: "Book management with separate Frontend/Backend.",
     longDescription: "Built RESTful APIs with Express.js and MongoDB for complete book management (CRUD). Developed a responsive React frontend integrated with Axios.",
     techStack: ["MongoDB", "Express", "React"],
-    repo: "https://github.com/fawaz-v/bookstore-app",
+    repo: "https://github.com/fawazv/bookstoreapp",
     demo: "#",
     color: "from-indigo-600/20 to-purple-500/20",
     hoverColor: "group-hover:from-indigo-600/40 group-hover:to-purple-500/40",
     span: "md:col-span-1 md:row-span-1",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2021/08/04/83896-583526610_large.mp4" // Books/Learning abstract
+    // Reading/Books Abstract for Grid - Library/Books
+    mediaUrl: "https://www.pexels.com/download/video/35503998-3840_2160_24fps.mp4",
+    // Library/Shelf for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/4253163/4253163-uhd_2560_1440_24fps.mp4"
   },
   {
     id: "pixabay-gallery",
@@ -87,13 +102,16 @@ const projects = [
     description: "Image search gallery using Pixabay API.",
     longDescription: "Implemented image search and responsive grid gallery using React, Tailwind CSS, and Axios. Integrated Pixabay API for fetching images.",
     techStack: ["React", "Vite", "Tailwind"],
-    repo: "https://github.com/fawaz-v/react-pixabay-gallery",
+    repo: "https://github.com/fawazv/1.-react-tailwind-pixabay-gallery",
     demo: "#",
     color: "from-pink-600/20 to-rose-500/20",
     hoverColor: "group-hover:from-pink-600/40 group-hover:to-rose-500/40",
     span: "md:col-span-1 md:row-span-1",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2022/03/09/110237-686940388_large.mp4" // Gallery/Images abstract
+    // Color/Image Abstract for Grid - Fluid Ink/Abstract Art
+    mediaUrl: "https://www.pexels.com/download/video/35381930-uhd_2560_1440_25fps.mp4",
+    // Scanning/Searching for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/1574044/1574044-uhd_2560_1440_25fps.mp4"
   },
   {
     id: "room-upload",
@@ -102,17 +120,20 @@ const projects = [
     description: "Secure image upload service details.",
     longDescription: "Built secure image upload flow using Express, Multer, and Cloudinary SDK with TypeScript backend. Developed responsive React + Vite frontend.",
     techStack: ["React", "Multer", "Cloudinary"],
-    repo: "https://github.com/fawaz-v/room-image-upload",
+    repo: "https://github.com/fawazv/multer-cloudinary",
     demo: "#",
     color: "from-yellow-600/20 to-orange-500/20",
     hoverColor: "group-hover:from-yellow-600/40 group-hover:to-orange-500/40",
     span: "md:col-span-1 md:row-span-1",
     mediaType: "video",
-    mediaUrl: "https://cdn.pixabay.com/video/2020/04/16/36294-413753736_large.mp4" // Data transfer abstract
+    // Data Transfer Abstract for Grid - Digital lines/Connection
+    mediaUrl: "https://www.pexels.com/download/video/14461075--uhd_2560_1440_25fps.mp4",
+    // Upload/Processing for Modal
+    demoVideoUrl: "https://videos.pexels.com/video-files/1255760/1255760-3840_2160_30fps.mp4"
   },
 ];
 
-const INITIAL_VISIBLE_COUNT = 6;
+const INITIAL_VISIBLE_COUNT = 5;
 
 export default function Projects() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -147,7 +168,10 @@ export default function Projects() {
         </motion.div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(280px,auto)]">
+        <motion.div 
+            layout 
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(280px,auto)]"
+        >
             <AnimatePresence mode="popLayout">
                 {visibleProjects.map((project, index) => (
                     <motion.div
@@ -157,12 +181,12 @@ export default function Projects() {
                         initial={{ opacity: 0, y: 20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.5, delay: index * 0.05 }}
+                        transition={{ duration: 0.3 }}
                         viewport={{ once: true }}
                         className={`group relative rounded-3xl overflow-hidden cursor-pointer border border-white/10 bg-white/5 backdrop-blur-md ${project.span}`}
                         whileHover={{ scale: 1.015 }}
                     >
-                        {/* Media Background */}
+                        {/* Media Background - Always 'mediaUrl' for Grid */}
                         {project.mediaType === "video" ? (
                              <video 
                                 autoPlay 
@@ -174,17 +198,16 @@ export default function Projects() {
                                 <source src={project.mediaUrl} type="video/mp4" />
                              </video>
                         ) : (
-                             // Fallback or Image type
                              <div className="absolute inset-0 w-full h-full bg-gray-800" />
                         )}
 
                         {/* Gradient Overlay */}
                         <div className={`absolute inset-0 bg-linear-to-br ${project.color} ${project.hoverColor} transition-all duration-500 opacity-60 group-hover:opacity-80 mix-blend-overlay`} />
                         
-                        {/* Darkener for text readability */}
+                        {/* Darkener */}
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
 
-                        {/* Noise Texture Overlay */}
+                        {/* Noise */}
                         <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
                         <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
@@ -205,7 +228,6 @@ export default function Projects() {
                                     {project.description}
                                 </p>
                                 
-                                {/* Tags visible on large cards or hover */}
                                 <div className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                                     {project.techStack.slice(0, 3).map(t => (
                                         <span key={t} className="text-[10px] uppercase tracking-wider text-white/80 bg-black/40 px-2 py-1 rounded backdrop-blur-sm border border-white/5">
@@ -218,24 +240,42 @@ export default function Projects() {
                     </motion.div>
                 ))}
             </AnimatePresence>
-        </div>
+        </motion.div>
 
-        {/* Load More Button */}
-        {hasMore && (
-             <div className="flex justify-center mt-12">
-                 <motion.button
+        {/* Pagination Buttons */}
+        <motion.div layout className="flex justify-center mt-12">
+            {hasMore ? (
+                <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setVisibleCount(prev => prev + 6)}
                     className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors backdrop-blur-md flex items-center gap-2 group"
-                 >
+                >
                     View More Projects
                     <svg className="w-4 h-4 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
+                </motion.button>
+            ) : projects.length > INITIAL_VISIBLE_COUNT && (
+                 <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                        const projectsSection = document.getElementById('projects');
+                        if (projectsSection) {
+                            projectsSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        setVisibleCount(INITIAL_VISIBLE_COUNT);
+                    }}
+                    className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors backdrop-blur-md flex items-center gap-2 group"
+                 >
+                    Show Less
+                    <svg className="w-4 h-4 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                    </svg>
                  </motion.button>
-             </div>
-        )}
+            )}
+        </motion.div>
 
         {/* Enhanced Modal */}
         <AnimatePresence>
@@ -248,10 +288,10 @@ export default function Projects() {
                         onClick={() => setSelectedId(null)}
                         className="fixed inset-0 bg-black/80 backdrop-blur-xl z-60"
                     />
-                    <div className="fixed inset-0 flex items-center justify-center z-70 pointer-events-none p-4 md:p-8">
+                    <div className="fixed inset-0 flex items-center justify-center z-70 pointer-events-auto p-4 md:p-8">
                         <motion.div
                            layoutId={selectedId}
-                           className="bg-[#121212] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-4xl border border-white/10 pointer-events-auto shadow-2xl relative scrollbar-hide"
+                           className="bg-[#121212] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-4xl border border-white/10 shadow-2xl relative scrollbar-hide"
                         >
                            <button 
                                 onClick={() => setSelectedId(null)}
@@ -263,7 +303,7 @@ export default function Projects() {
                            </button>
 
                            <div className="flex flex-col md:flex-row h-full">
-                                {/* Visual Side */}
+                                { /* Visual Side - Prioritize 'demoVideoUrl', fallback to 'mediaUrl' */ }
                                 <div className={`w-full md:w-2/5 min-h-[300px] relative overflow-hidden flex flex-col justify-end p-8`}>
                                    {selectedProject.mediaType === "video" && (
                                         <video 
@@ -272,8 +312,10 @@ export default function Projects() {
                                             muted 
                                             playsInline 
                                             className="absolute inset-0 w-full h-full object-cover opacity-60"
+                                            // Ensure video reloads when src changes (key)
+                                            key={selectedProject.demoVideoUrl || selectedProject.mediaUrl}
                                         >
-                                            <source src={selectedProject.mediaUrl} type="video/mp4" />
+                                            <source src={selectedProject.demoVideoUrl || selectedProject.mediaUrl} type="video/mp4" />
                                         </video>
                                    )}
                                    <div className={`absolute inset-0 bg-linear-to-b ${selectedProject.color} mix-blend-overlay opacity-80`} />
