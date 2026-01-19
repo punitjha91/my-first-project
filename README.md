@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fawaz V - Personal Portfolio
 
-## Getting Started
+A premium, interactive personal portfolio website built with modern web technologies to showcase my projects, technical skills, and professional journey.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Immersive Design:** Dark-themed, high-contrast aesthetic with ambient lighting and glassmorphism effects.
+- **Scrolly-telling Experience:** Smooth scroll animations and transition effects guided by user interaction.
+- **Interactive Projects Grid:** Bento-style grid layout with video previews and detailed modal views for each project.
+- **Dynamic Timeline:** Visual representation of my professional career and educational background.
+- **Testimonial Marquee:** Infinite scrolling marquee for client and colleague testimonials.
+- **Responsive Layout:** Fully optimized for desktops, tablets, and mobile devices.
+- **Contact Integration:** Functional contact form integrated with Nodemailer for direct email communication.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **3D Elements:** [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+- **Icons:** Custom SVG & Lucide React
+- **Video:** [FFmpeg](https://ffmpeg.org/) (for optimization) & HTML5 Video
+
+## 📂 Project Structure
+
+```
+├── src/
+│   ├── app/             # Application routes (Next.js App Router)
+│   ├── components/      # Reusable UI components (Hero, Projects, Skills, etc.)
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions and shared logic
+│   └── styles/          # Global styles and Tailwind configuration
+├── public/              # Static assets (images, videos, fonts)
+├── .env.local           # Environment variables (not committed)
+└── package.json         # Project dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js (v18 or higher)
+- npm, yarn, or pnpm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fawazv/personal_porfolio.git
+   cd personal_porfolio
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the necessary variables for email services (if applicable):
+   ```env
+   EMAIL_USER=your_email@example.com
+   EMAIL_PASS=your_app_password
+   ```
 
-## Deploy on Vercel
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm start`: Runs the built production application.
+- `npm run lint`: Runs ESLint for code quality checks.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/fawazv/personal_porfolio/issues).
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
