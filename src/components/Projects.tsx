@@ -17,11 +17,11 @@ const projects = [
     color: "from-blue-600/20 to-cyan-500/20",
     hoverColor: "group-hover:from-blue-600/40 group-hover:to-cyan-500/40",
     span: "md:col-span-2 md:row-span-2",
-    mediaType: "video",
-    // Abstract Network/Server for Grid - High Quality Tech Abstract
-    mediaUrl: "https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4",
+    mediaType: "image",
+    // Abstract Network/Server for Grid
+    mediaUrl: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     // Code/Structure Demo for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" 
+    demoUrl: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "nxtcart",
@@ -35,11 +35,11 @@ const projects = [
     color: "from-purple-600/20 to-pink-500/20",
     hoverColor: "group-hover:from-purple-600/40 group-hover:to-pink-500/40",
     span: "md:col-span-1 md:row-span-2",
-    mediaType: "video",
-    // Future/Retail Abstract for Grid - Shopping/Ecommerce Concept
-    mediaUrl: "https://www.pexels.com/download/video/2257012-uhd_2560_1440_30fps.mp4",
-    // Shopping/Cart Interaction for Modal 
-    demoVideoUrl: "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" 
+    mediaType: "image",
+    // Shopping/Ecommerce Concept
+    mediaUrl: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // Shopping Interaction
+    demoUrl: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "dropbox-clone",
@@ -53,11 +53,11 @@ const projects = [
     color: "from-orange-500/20 to-red-500/20",
     hoverColor: "group-hover:from-orange-500/40 group-hover:to-red-500/40",
     span: "md:col-span-1 md:row-span-1",
-    mediaType: "video",
-    // Cloud/Data Abstract for Grid - Cloud/Sky/Tech
-    mediaUrl: "https://www.pexels.com/download/video/19963500-uhd_2560_1440_30fps.mp4",
-    // File/Folder Management for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/3252455/3252455-uhd_2560_1440_25fps.mp4"
+    mediaType: "image",
+    // Cloud/Data Abstract
+    mediaUrl: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // File Management
+    demoUrl: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "blog-microservices",
@@ -71,11 +71,11 @@ const projects = [
     color: "from-green-600/20 to-teal-500/20",
     hoverColor: "group-hover:from-green-600/40 group-hover:to-teal-500/40",
     span: "md:col-span-1 md:row-span-1",
-    mediaType: "video",
-    // Typing/Code Abstract for Grid - Matrix/Data Flow
-    mediaUrl: "https://www.pexels.com/download/video/35088034-uhd_2560_1440_25fps.mp4",
-    // Server/Terminal for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/5309324/5309324-uhd_2560_1440_30fps.mp4"
+    mediaType: "image",
+    // Typing/Code Abstract
+    mediaUrl: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // Server/Terminal
+    demoUrl: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "bookstore-app",
@@ -89,11 +89,11 @@ const projects = [
     color: "from-indigo-600/20 to-purple-500/20",
     hoverColor: "group-hover:from-indigo-600/40 group-hover:to-purple-500/40",
     span: "md:col-span-1 md:row-span-1",
-    mediaType: "video",
-    // Reading/Books Abstract for Grid - Library/Books
-    mediaUrl: "https://www.pexels.com/download/video/35503998-3840_2160_24fps.mp4",
-    // Library/Shelf for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/4253163/4253163-uhd_2560_1440_24fps.mp4"
+    mediaType: "image",
+    // Reading/Books
+    mediaUrl: "https://images.pexels.com/photos/207636/pexels-photo-207636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // Library/Shelf
+    demoUrl: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "pixabay-gallery",
@@ -107,11 +107,11 @@ const projects = [
     color: "from-pink-600/20 to-rose-500/20",
     hoverColor: "group-hover:from-pink-600/40 group-hover:to-rose-500/40",
     span: "md:col-span-1 md:row-span-1",
-    mediaType: "video",
-    // Color/Image Abstract for Grid - Fluid Ink/Abstract Art
-    mediaUrl: "https://www.pexels.com/download/video/35381930-uhd_2560_1440_25fps.mp4",
-    // Scanning/Searching for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/1574044/1574044-uhd_2560_1440_25fps.mp4"
+    mediaType: "image",
+    // Color/Art
+    mediaUrl: "https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // Searching/Scanning
+    demoUrl: "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "room-upload",
@@ -125,11 +125,11 @@ const projects = [
     color: "from-yellow-600/20 to-orange-500/20",
     hoverColor: "group-hover:from-yellow-600/40 group-hover:to-orange-500/40",
     span: "md:col-span-1 md:row-span-1",
-    mediaType: "video",
-    // Data Transfer Abstract for Grid - Digital lines/Connection
-    mediaUrl: "https://www.pexels.com/download/video/14461075--uhd_2560_1440_25fps.mp4",
-    // Upload/Processing for Modal
-    demoVideoUrl: "https://videos.pexels.com/video-files/1255760/1255760-3840_2160_30fps.mp4"
+    mediaType: "image",
+    // Data Transfer
+    mediaUrl: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // Upload/Processing
+    demoUrl: "https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
 ];
 
@@ -187,19 +187,11 @@ export default function Projects() {
                         whileHover={{ scale: 1.015 }}
                     >
                         {/* Media Background - Always 'mediaUrl' for Grid */}
-                        {project.mediaType === "video" ? (
-                             <video 
-                                autoPlay 
-                                loop 
-                                muted 
-                                playsInline 
-                                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700"
-                             >
-                                <source src={project.mediaUrl} type="video/mp4" />
-                             </video>
-                        ) : (
-                             <div className="absolute inset-0 w-full h-full bg-gray-800" />
-                        )}
+                        <img 
+                            src={project.mediaUrl}
+                            alt={project.title}
+                            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-110"
+                        />
 
                         {/* Gradient Overlay */}
                         <div className={`absolute inset-0 bg-linear-to-br ${project.color} ${project.hoverColor} transition-all duration-500 opacity-60 group-hover:opacity-80 mix-blend-overlay`} />
@@ -303,21 +295,13 @@ export default function Projects() {
                            </button>
 
                            <div className="flex flex-col md:flex-row h-full">
-                                { /* Visual Side - Prioritize 'demoVideoUrl', fallback to 'mediaUrl' */ }
+                                { /* Visual Side - Prioritize 'demoUrl', fallback to 'mediaUrl' */ }
                                 <div className={`w-full md:w-2/5 min-h-[300px] relative overflow-hidden flex flex-col justify-end p-8`}>
-                                   {selectedProject.mediaType === "video" && (
-                                        <video 
-                                            autoPlay 
-                                            loop 
-                                            muted 
-                                            playsInline 
-                                            className="absolute inset-0 w-full h-full object-cover opacity-60"
-                                            // Ensure video reloads when src changes (key)
-                                            key={selectedProject.demoVideoUrl || selectedProject.mediaUrl}
-                                        >
-                                            <source src={selectedProject.demoVideoUrl || selectedProject.mediaUrl} type="video/mp4" />
-                                        </video>
-                                   )}
+                                    <img 
+                                        src={selectedProject.demoUrl || selectedProject.mediaUrl}
+                                        alt={selectedProject.title}
+                                        className="absolute inset-0 w-full h-full object-cover opacity-80" 
+                                    />
                                    <div className={`absolute inset-0 bg-linear-to-b ${selectedProject.color} mix-blend-overlay opacity-80`} />
                                    <div className="absolute inset-0 bg-black/20" />
                                    
