@@ -192,28 +192,55 @@ function TimelineItem({ item, index }: any) {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className={`flex items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"
-        }`}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`relative flex flex-col md:flex-row items-start ${
+        isEven ? "md:flex-row" : "md:flex-row-reverse"
+      }`}
     >
+      {/* Spacer */}
       <div className="hidden md:block w-1/2" />
 
-      {/* Dot */}
-      <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2" />
+      {/* Center Dot */}
+      <div className="absolute left-4 md:left-1/2 top-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-[#121212] transform -translate-x-1/2 -translate-y-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+        <div className="absolute inset-0 bg-blue-400 blur-sm opacity-70" />
+      </div>
 
-      {/* Card */}
-      <div className={`w-full md:w-1/2 pl-12 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-        <div className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition">
-
+      {/* Card Container */}
+      <div
+        className={`w-full md:w-1/2 min-w-0 pl-12 md:pl-0 flex ${
+          isEven
+            ? "md:justify-end md:pr-16"
+            : "md:justify-start md:pl-16"
+        }`}
+      >
+        <div
+          className="w-full max-w-md min-w-0 p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition duration-300 text-left"
+        >
           {/* Header */}
-          <span className="text-xs text-blue-400">{item.year}</span>
-          <h3 className="text-white font-bold">{item.title}</h3>
-          <p className="text-purple-300 text-sm mb-3">{item.org}</p>
+          <span className="text-xs text-blue-400 font-mono mb-1 inline-block">
+            {item.year}
+          </span>
 
-          <p className="text-gray-400 text-sm mb-4">{item.description}</p>
+          <h3 className="text-white font-bold text-lg">
+            {item.title}
+          </h3>
+
+          <p className="text-purple-300 text-sm mb-3">
+            {item.org}
+          </p>
+
+          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+            {item.description}
+          </p>
 
           {/* KPI BADGES */}
           {item.kpis && (
-            <div className={`flex flex-wrap gap-2 ${isEven ? "md:justify-end" : ""}`}>
+            <div
+              className={`flex flex-wrap gap-2 ${
+                isEven ? "md:justify-end" : "md:justify-start"
+              }`}
+            >
               {/* Team */}
               <span className="px-3 py-1 text-xs bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full">
                 👥 {item.kpis.team}
