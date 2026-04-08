@@ -9,8 +9,36 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Scrollytelling Portfolio",
-  description: "A cinematic developer portfolio.",
+  title: "Punit Jha | QA Lead & Test Automation Expert",
+  description:
+    "QA Lead with 11+ years of experience in banking and enterprise applications. متخصص in test automation, TOSCA, Appium, API testing, and delivering high-quality scalable systems.",
+  keywords: [
+    "Punit Jha",
+    "QA Lead",
+    "Test Manager",
+    "Automation Testing",
+    "TOSCA",
+    "Appium",
+    "API Testing",
+    "Banking QA",
+    "Software Testing Australia",
+    "Quality Engineering",
+  ],
+  authors: [{ name: "Punit Jha" }],
+  openGraph: {
+    title: "Punit Jha | QA Leadership & Engineering Impact",
+    description:
+      "Explore QA leadership, automation strategies, and enterprise testing expertise built over 11+ years in banking and large-scale systems.",
+    url: "https://your-portfolio-url.com",
+    siteName: "Punit Jha Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Punit Jha | QA Lead",
+    description:
+      "QA Leader specializing in automation, enterprise testing, and scalable quality engineering.",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased bg-[#0a0a0a] text-white`}>
+        {children}
+      </body>
     </html>
   );
 }

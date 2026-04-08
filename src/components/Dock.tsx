@@ -30,6 +30,14 @@ const Icons = {
   BookOpen: (props: any) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
   ),
+  Certificate: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M4 6h16v12H4z" />
+      <path d="M9 10h6" />
+      <path d="M9 14h6" />
+      <path d="M12 18l2 2 4-4" />
+    </svg>
+  ),
   Mail: (props: any) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
   ),
@@ -44,6 +52,7 @@ const DOCK_ITEMS = [
   { id: "testimonials", icon: Icons.Star, label: "Testimonials", href: "#testimonials" },
   { id: "blog", icon: Icons.BookOpen, label: "Blog", href: "#blog" },
   { id: "skills", icon: Icons.Zap, label: "Skills", href: "#skills" },
+  { id: "certifications", icon: Icons.Certificate, label: "Certification", href: "#certifications" },
   { id: "journey", icon: Icons.Compass, label: "Journey", href: "#journey" },
   { id: "contact", icon: Icons.Mail, label: "Contact", href: "#contact" },
   { id: "resume", icon: Icons.FileText, label: "Resume", href: "/resume.pdf", external: true },

@@ -1,121 +1,240 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const TIMELINE_DATA = [
   {
-    year: "2024 - Present",
-    title: "Full Stack Developer",
-    org: "Freelance & Open Source",
-    description: "Architecting enterprise-scale applications like 'Elite Hotel' (Microservices) and 'Nxtcart' (E-commerce). Expertise in Next.js, Docker, Kubernetes, and Cloud Architecture.",
+    year: "2025 - Present",
+    title: "Test Lead – ANZ App Migration",
+    org: "Capgemini Australia",
+    description:
+      "Leading end-to-end testing for ANZ migration program. Validating data mapping, transformation, and reconciliation across mobile and web platforms. Driving automation using Appium.",
     type: "work",
+    kpis: {
+      team: "12+ Engineers",
+      impact: "Zero Migration Defects",
+      tools: ["Appium", "JIRA", "SQL"],
+    },
   },
   {
-    year: "2023",
-    title: "The Pivot to Tech",
-    org: "Self-Taught Journey",
-    description: "Graduated with a Bachelor of Commerce but discovered a passion for problem-solving. Dedicated 1000+ hours to mastering the MERN stack and software engineering fundamentals.",
-    type: "milestone",
+    year: "2021 - 2025",
+    title: "Test Lead – Commercial Lending Platform",
+    org: "Capgemini Australia",
+    description:
+      "Led QA delivery for Fenergo platform. Managed 16 QA engineers, drove automation strategy using TOSCA, and ensured high-quality releases.",
+    type: "work",
+    kpis: {
+      team: "16 QA Engineers",
+      impact: "High-Quality Releases",
+      tools: ["TOSCA", "JIRA"],
+    },
   },
   {
-    year: "2020 - 2023",
-    title: "Bachelor of Commerce",
-    org: "Calicut University",
-    description: "Graduated with a specialization in Co-operation. Developed a strong analytical mindset and understanding of business logic.",
+    year: "2018 - 2021",
+    title: "Associate Consultant",
+    org: "Atos Syntel",
+    description:
+      "Handled TNT-FedEx integration testing across UK & India. Designed test cases and ensured seamless integration.",
+    type: "work",
+    kpis: {
+      team: "10+ Engineers",
+      impact: "Seamless Integration",
+      tools: ["Selenium", "JIRA"],
+    },
+  },
+  {
+    year: "2014 - 2018",
+    title: "Software Test Engineer",
+    org: "SLK Software",
+    description:
+      "Performed functional & regression testing for US banking systems. Worked closely with dev teams.",
+    type: "work",
+    kpis: {
+      team: "5+ Engineers",
+      impact: "Robust Testing Framework",
+      tools: ["Selenium", "JIRA"],
+    },
+  },
+  {
+    year: "2022 - 2024",
+    title: "MBA (IT & Finance)",
+    org: "Subharti University",
+    description:
+      "Strengthened business + tech alignment for enterprise systems.",
     type: "education",
   },
   {
-    year: "2018 - 2020",
-    title: "Computer Applications",
-    org: "GHSS Tirurangadi",
-    description: "Higher Secondary in Commerce with Computer Applications. Early exposure to programming concepts which sparked my initial interest in tech.",
+    year: "2009 - 2013",
+    title: "B.E (CSE)",
+    org: "Anna University",
+    description:
+      "Built strong foundations in programming & systems.",
     type: "education",
   },
 ];
 
 export default function Timeline() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [view, setView] = useState<"timeline" | "cards" | "list">("timeline");
+  const [filter, setFilter] = useState<"all" | "work" | "education">("all");
+
+  const filteredData =
+    filter === "all"
+      ? TIMELINE_DATA
+      : TIMELINE_DATA.filter((item) => item.type === filter);
 
   return (
-    <section className="relative z-20 bg-[#0a0a0a] min-h-screen py-32 px-4 md:px-12 overflow-hidden" id="journey">
-       {/* Background Ambience */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] right-[20%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
-      </div>
+    <section className="bg-[#0a0a0a] py-32 px-4 md:px-12" id="journey">
+      <div className="max-w-7xl mx-auto">
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-           className="text-center mb-20"
-        >
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-             My <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">Journey</span>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            My <span className="text-blue-400">Journey</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            From writing my first "Hello World" to building complex applications. 
-            Here is a glimpse into my professional evolution.
-          </p>
-        </motion.div>
 
-        <div ref={containerRef} className="relative max-w-4xl mx-auto">
-          {/* Vertical Line */}
-          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[2px] bg-linear-to-b from-blue-500/20 via-purple-500/50 to-blue-500/20 transform md:-translate-x-1/2" />
+          {/* Controls */}
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            {["timeline", "cards", "list"].map((v) => (
+              <button
+                key={v}
+                onClick={() => setView(v as any)}
+                className={`px-4 py-2 rounded-full text-sm border ${view === v
+                    ? "bg-blue-500 text-white"
+                    : "text-gray-400 border-white/10"
+                  }`}
+              >
+                {v}
+              </button>
+            ))}
 
-          <div className="space-y-12">
-            {TIMELINE_DATA.map((item, index) => (
-              <TimelineItem key={index} item={item} index={index} />
+            {["all", "work", "education"].map((f) => (
+              <button
+                key={f}
+                onClick={() => setFilter(f as any)}
+                className={`px-4 py-2 rounded-full text-sm border ${filter === f
+                    ? "bg-purple-500 text-white"
+                    : "text-gray-400 border-white/10"
+                  }`}
+              >
+                {f}
+              </button>
             ))}
           </div>
         </div>
+
+        {/* ===== TIMELINE VIEW ===== */}
+        {view === "timeline" && (
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-500/20 via-purple-500/50 to-blue-500/20 md:-translate-x-1/2" />
+
+            <div className="space-y-12">
+              {filteredData.map((item, index) => (
+                <TimelineItem key={index} item={item} index={index} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ===== CARD VIEW ===== */}
+        {view === "cards" && (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredData.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10"
+              >
+                <span className="text-xs text-blue-400">{item.year}</span>
+                <h3 className="text-xl font-bold text-white mt-2">
+                  {item.title}
+                </h3>
+                <p className="text-purple-300 text-sm">{item.org}</p>
+                <p className="text-gray-400 text-sm mt-3">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {/* ===== LIST VIEW ===== */}
+        {view === "list" && (
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {filteredData.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="border-l-2 border-blue-500 pl-6"
+              >
+                <h3 className="text-white font-bold">{item.title}</h3>
+                <p className="text-sm text-gray-400">
+                  {item.org} • {item.year}
+                </p>
+                <p className="text-gray-400 text-sm mt-2">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-function TimelineItem({ item, index }: { item: any; index: number }) {
+function TimelineItem({ item, index }: any) {
   const isEven = index % 2 === 0;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`relative flex items-center ${
-        isEven ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
+      className={`flex items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
     >
-      {/* Spacer for desktop layout */}
       <div className="hidden md:block w-1/2" />
 
-      {/* Point on Line */}
-      <div className="absolute left-[20px] md:left-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-[#121212] transform -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-         <div className="absolute inset-0 bg-blue-400 blur-sm opacity-70" />
-      </div>
+      {/* Dot */}
+      <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2" />
 
-      {/* Content Card */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
-        <div className="group relative p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-          <div className={`flex flex-col ${isEven ? "md:items-end" : "md:items-start"} mb-2`}>
-             <span className="text-xs text-blue-400 font-mono border border-blue-500/30 px-2 py-1 rounded-full bg-blue-500/10 mb-2 w-fit">
-              {item.year}
-            </span>
-            <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
-              {item.title}
-            </h3>
-          </div>
-          
-          <p className="text-sm text-purple-300 mb-4 font-medium uppercase tracking-wider">
-            {item.org}
-          </p>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            {item.description}
-          </p>
+      {/* Card */}
+      <div className={`w-full md:w-1/2 pl-12 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+        <div className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition">
+
+          {/* Header */}
+          <span className="text-xs text-blue-400">{item.year}</span>
+          <h3 className="text-white font-bold">{item.title}</h3>
+          <p className="text-purple-300 text-sm mb-3">{item.org}</p>
+
+          <p className="text-gray-400 text-sm mb-4">{item.description}</p>
+
+          {/* KPI BADGES */}
+          {item.kpis && (
+            <div className={`flex flex-wrap gap-2 ${isEven ? "md:justify-end" : ""}`}>
+              {/* Team */}
+              <span className="px-3 py-1 text-xs bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full">
+                👥 {item.kpis.team}
+              </span>
+
+              {/* Impact */}
+              <span className="px-3 py-1 text-xs bg-green-500/10 text-green-300 border border-green-500/20 rounded-full">
+                ⚡ {item.kpis.impact}
+              </span>
+
+              {/* Tools */}
+              {item.kpis.tools.map((tool: string, i: number) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full"
+                >
+                  🛠 {tool}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
