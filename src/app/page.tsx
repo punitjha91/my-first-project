@@ -13,12 +13,12 @@ export default function Home() {
     <main className="bg-[#121212] min-h-screen text-white">
       <Hero />
       <Projects />
-      <Testimonials />
       <Skills />
       <Certifications />
       <Timeline />
       <Blog />
       <Dock />
+      <Testimonials />
       <Contact />
     </main>
   );
